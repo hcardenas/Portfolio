@@ -1,20 +1,48 @@
 <link rel="stylesheet" href="../css/titleBackground.css">
 
 
-  <h1 class="uk-heading-line uk-heading-bullet" id="about"><span>About</span></h1>
+  <h1 class="uk-heading-line uk-heading-bullet" id="about"><span>About Me</span></h1>
 
   <div class="uk-child-width-1-1@m" uk-grid uk-scrollspy="cls: uk-animation-scale-down; target: > div > .uk-card; delay: 500; repeat: false" >
-    <div>
-        <div class="uk-card uk-card-default uk-card-body uk-box-shadow-xlarge uk-padding title-background uk-child-width-1-2">
+        {{!-- <div class="uk-card uk-card-default uk-card-body uk-box-shadow-xlarge uk-padding title-background uk-child-width-1-2">
             <div class="uk-card-media-left uk-cover-container">
             <img src="../img/helmut.JPG" alt="" uk-cover>
             <canvas width="600" height="400"></canvas>
         </div>
         <div>
-            <div class="uk-card-body"></div>
+            <div class="uk-card-body">
+              <h1>Helmut Cardenas</h1>
+              <p>hello</p>
+            </div>
         </div>
-        </div>
-    </div>
+        </div> --}}
+        <div>
+          <article class="uk-comment uk-box-shadow-xlarge uk-section-muted">
+            <header class="uk-comment-header uk-grid-medium uk-flex-middle  " uk-grid>
+                <div class="uk-width-auto">
+                    <img class="uk-comment-avatar" src="../img/helmut.JPG" width="280" height="280" alt="">
+                </div>
+
+                <div class="uk-width-expand uk-section-muted">
+
+                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Helmut Cardenas</a></h4>
+                    <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                        <li><a href="#">Github</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="uk-comment-body">
+              <div class="uk-align-center uk-container-small ">
+                <hr class="uk-divider-icon">
+                <p >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+            </br>
+        </article>
+      </div>
+    
+    
 </div>
     
   
@@ -153,7 +181,7 @@
 
 
   
-  <div class="uk-child-width-1-2@m uk-container-center " uk-grid uk-scrollspy="cls: uk-animation-slide-left-small; target: > div > .uk-card; delay: 500; repeat: false" >
+  {{!-- <div class="uk-child-width-1-2@m uk-container-center " uk-grid uk-scrollspy="cls: uk-animation-slide-left-small; target: > div > .uk-card; delay: 500; repeat: false" >
     <div>
         <div class="uk-card uk-card-default">
             <div class="uk-card-media-top">
@@ -176,7 +204,45 @@
             </div>
         </div>
     </div>
+
+</div> --}}
+
+<div class="uk-child-width-1-1@m uk-container-center" uk-scrollspy="cls: uk-animation-slide-right; target: > div > .uk-card; delay: 500; repeat: false" uk-grid>
+  <div>
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin title-background uk-box-shadow-xlarge" uk-grid >
+        <div class="uk-card-media-left uk-cover-container">
+            <img src="https://images.pexels.com/photos/103886/pexels-photo-103886.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+        </div>
+        <div>
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">Media Left</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+        </div>
+    </div>
+  </div>
 </div>
+
+<div class="uk-child-width-1-1@m uk-container-center" uk-scrollspy="cls: uk-animation-slide-left; target: > div > .uk-card; delay: 500; repeat: false" uk-grid>
+  <div>
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin title-background uk-box-shadow-xlarge" uk-grid >
+        <div>
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">Media Left</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+        </div>
+        <div class="uk-card-media-right uk-cover-container">
+            <img src="https://images.pexels.com/photos/103886/pexels-photo-103886.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+        </div>
+        
+    </div>
+  </div>
+</div>
+
+
   
 </br>
 <div class="">
