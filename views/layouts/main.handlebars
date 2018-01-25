@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Sweet Flower Design inc</title>
+  <title>Helmut Cardenas</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/css/uikit.min.css" />
 
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit-icons.min.js"></script>
 
-  <link rel="stylesheet" href="../css/home.css">
-  <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+<!-- Google font Risque -->
+<link href="https://fonts.googleapis.com/css?family=Risque" rel="stylesheet">
+
+  
+<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="../css/googleFontRisque.css">
+<link rel="stylesheet" href="../css/home.css">
   
 </head>
 <body>
-    <div class="container">
-      
-      {{{ body }}}
-
+    
+    <div class="uk-container-expand">
+      {{>navbar}}
     </div>
+
+
+    <div class="uk-container">
+      {{{ body }}}
+    </div>
+    
+    
 
   </body>
 </html>
