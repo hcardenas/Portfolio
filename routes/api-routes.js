@@ -1,22 +1,38 @@
 var mongose = require("mongoose");
 var db = require("../models");
 var ObjectId = mongose.Types.ObjectId;
+var nodemailer = require("nodemailer");
+
 module.exports = function(app) {
 
-    app.put("/api/save-article", function(req, res) {
-        console.log(` body is: ${req.body.id}`);
-        db.Article.update({
-            _id: req.body.id
-        }, {
-            $set: {
-                saved: true
+    var transporter = nodemailer.createTransport({
+            service: 'Gmail',
+            host: "smtp.gmail.com",
+            auth: {
+                user: 'profilesendmail@gmail.com', // Your email id
+                pass: 'Hc123456#' // Your password
             }
-        }).then(function(data) {
-            res.json(data);
-
-        }).catch(function(err) {
-            res.json(err);
         });
+
+
+    app.post("/api/email", function(req, res) {
+        console.log(` body is: ${req.body}`);
+        // var mailOptions={
+        // to : req.query.to,
+        // from: 'example@gmail.com>', 
+        // subject : req.query.subject,
+        // text : req.query.text
+        //     }
+        //     console.log(mailOptions);
+        //     transporter.sendMail(mailOptions, function(error, response){
+        //      if(error){
+        //             console.log(error);
+        //         res.end("error");
+        //      }else{
+        //             console.log("Message sent: " + response.message);
+        //         res.end("sent");
+        //          }
+        // });
 
     });
 

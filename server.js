@@ -12,6 +12,7 @@ var mongoose = require("mongoose");
 var axios = require("axios");
 var cheerio = require("cheerio");
 
+
 // Requiring our models for syncing
 var db = require("./models");
 // Sets up the Express App
