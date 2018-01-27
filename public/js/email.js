@@ -1,5 +1,12 @@
 $(document).ready(function() {
 	console.log("ready");
+	$.toast({
+				    heading: 'Email',
+				    text: 'Email Sent.',
+				    icon: 'info',
+				    loader: true,  // To change the background
+				    position: "top-left"
+				})
 
 	$("#EmailBtn").on("click", ()=> {
 		event.preventDefault();
@@ -15,22 +22,26 @@ $(document).ready(function() {
 		$.post( "/api/email", emailInfo ,function( response ) {
   			console.log(response);
   			if (response === "sent") {
-	  			UIkit.notification({
-				    message: "<span uk-icon=\'icon: check\'></span> Email Sent!",
-				    status: 'success',
-				    pos: 'bottom-right',
-				    timeout: 5000
-				});
-				$("#emailForm")[0].reset();
+	  			$.toast({
+				    heading: 'Success',
+				    text: 'Email Sent.',
+				    icon: 'info',
+				    loader: true,
+				    position: "top-left"  
+				})
+				
 			} else {
-				UIkit.notification({
-				    message: "<span uk-icon=\'icon: close\'></span> Email failed!",
-				    status: 'danger',
-				    pos: 'bottom-right',
-				    timeout: 5000
-				});
-				$("#emailForm")[0].reset();
+				$.toast({
+				    heading: 'Error',
+				    text: 'Email Failed.',
+				    icon: 'error',
+				    loader: true,
+				    position: "top-left" 
+				})
+				
 			}
+
+			$("#emailForm")[0].reset();
 		});
 
 		
