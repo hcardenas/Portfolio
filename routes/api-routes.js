@@ -21,7 +21,7 @@ module.exports = function(app) {
         to : "helmutacardenas@gmail.com",
         from: req.body.from, 
         subject : req.body.subject,
-        text : `name: ${req.body.name}\n${req.body.text}`
+        text : `name: ${req.body.name}\n${req.body.text}\nreturn address: ${req.body.from}`
             }
             console.log(mailOptions);
             transporter.sendMail(mailOptions, function(error, response){
