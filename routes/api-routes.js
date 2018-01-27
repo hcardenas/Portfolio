@@ -16,23 +16,23 @@ module.exports = function(app) {
 
 
     app.post("/api/email", function(req, res) {
-        console.log(` body is: ${req.body}`);
-        // var mailOptions={
-        // to : req.query.to,
-        // from: 'example@gmail.com>', 
-        // subject : req.query.subject,
-        // text : req.query.text
-        //     }
-        //     console.log(mailOptions);
-        //     transporter.sendMail(mailOptions, function(error, response){
-        //      if(error){
-        //             console.log(error);
-        //         res.end("error");
-        //      }else{
-        //             console.log("Message sent: " + response.message);
-        //         res.end("sent");
-        //          }
-        // });
+        console.log(` body is: ${JSON.stringify(req.body)}`);
+        var mailOptions={
+        to : "helmutacardenas@gmail.com",
+        from: req.body.from, 
+        subject : req.body.subject,
+        text : `name: ${req.body.name}\n${req.body.text}`
+            }
+            console.log(mailOptions);
+            transporter.sendMail(mailOptions, function(error, response){
+             if(error){
+                    console.log(error);
+                res.end("error");
+             }else{
+                    console.log("Message sent: " + response.message);
+                res.end("sent");
+                 }
+        });
 
     });
 
