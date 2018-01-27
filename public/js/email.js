@@ -18,7 +18,7 @@ $(document).ready(function() {
 	  			UIkit.notification({
 				    message: "<span uk-icon=\'icon: check\'></span> Email Sent!",
 				    status: 'success',
-				    pos: 'top-right',
+				    pos: 'bottom-right',
 				    timeout: 5000
 				});
 				$("#emailForm")[0].reset();
@@ -26,7 +26,7 @@ $(document).ready(function() {
 				UIkit.notification({
 				    message: "<span uk-icon=\'icon: close\'></span> Email failed!",
 				    status: 'danger',
-				    pos: 'top-right',
+				    pos: 'bottom-right',
 				    timeout: 5000
 				});
 				$("#emailForm")[0].reset();
